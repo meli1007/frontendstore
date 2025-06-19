@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Store</title>
+    <link rel="stylesheet" class="" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" class="" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="" href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="logo">
+        </a>
+    </header>
+
+    <nav class="navigation">
+        <a class="navigation__link navigation__link--active" href="index.html">Store</a>
+        <a class="navigation__link" href="about.html">Über uns</a>
+    </nav>
+
+    <main class="container">
+        <h1>React JS</h1>
+
+        <div class="tshirt">
+            <img class="tshirt__image" src="img/3.jpg" alt="Product Image">
+            <div class="tshirt__content">
+                <p>Nam sed leo fringilla, ultricies elit in,
+                    lacinia arcu. Aliquam ut turpis in tortor 
+                    fermentum euismod et at nisi. Nullam sit 
+                    amet nisi tincidunt, posuere lacus et, 
+                    egestas diam. Aliquam interdum ornare 
+                    nunc non ullamcorper. Proin rutrum nisi 
+                    sem, et sagittis nunc mattis non. Cras non rhoncus quam. 
+                    Sed hendrerit malesuada justo eu mattis.
+                    </p>
+                <form class="form">
+                    <select class="form__field">
+                        <option disabled selected>-- Größe auswählen --</option>
+                        <option class="form__option">Klein</option>
+                        <option class="form__option">Mittel</option>
+                        <option class="form__option">Groß</option>
+                    </select>
+                    <input class="form__field" type="number" placeholder="Menge" min="1">
+                    <input class="form__submit" type="submit" value="Im Warenkorb hinzufügen">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Front End Store - Alle Rechte vorbehalten © 2025. </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,246 @@
+:root {
+    --primary: #1A1A40;
+    --light-primary: #106faf;
+    --secundary: #db50bd;
+    --dark-secundary: #b326a0;
+    --white: #FFF;
+    --black: #000;
+    --dark-grey: #272a31;
+
+    --principal-font: "Staatliches", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+/* Globals */
+body {
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1,h2,h3 {
+    text-align: center;
+    color: var(--secundary);
+    font-family: var(--principal-font);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+    width: 25rem;
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--light-primary);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__text {
+    font-family: var(--principal-font);
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+
+/* Navigation */
+.navigation {
+    background-color: var(--light-primary);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* or .navigation__link:last-of-type{
+        margin-right: 0;
+    }
+    */
+}
+.navigation__link {
+    font-family: var(--principal-font);
+    color: var(--white);
+    font-size: 3rem;
+    /*margin-right: 2rem;*/
+}
+
+.navigation__link--active,
+.navigation__link:hover {
+    color: var(--secundary);
+}
+
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*column-gap: 2rem;
+    row-gap: 2rem;*/
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Products */
+.product {
+    background-color: var(--light-primary);
+    padding: 1rem;
+}
+.product__image {
+    width: 100%;
+}
+.product__name {
+    font-size: 4rem;
+    color: var(--white)
+}
+.product__price {
+    font-size: 2.8rem;
+    color: var(--secundary)
+}
+.product__name,
+.product__price {
+    font-family: var(--principal-font);
+    margin: 1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Graphics */
+.graphic {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.graphic--tshirt {
+    background-image: url(../img/grafico1.jpg);
+    grid-row: 2 / 3;
+}
+.graphic--node {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+@media (min-width: 768px) {
+    .graphic--node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/* About us */
+.us {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 768px) {
+    .us {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.us__image {
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px) {
+    .us__image {
+        grid-column: 2 / 3;
+    }
+}
+
+
+/* Blocks */
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .blocks {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.block {
+    text-align: center;
+}
+.block__title {
+    margin: 0;
+}
+
+/* Product Site */
+@media (min-width: 768px) {
+    .tshirt{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.form__field{
+    border: 1rem solid var(--light-primary);
+    background-color: transparent;
+    color: var(--white);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+.form__submit{
+    background-color: var(--secundary);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--principal-font);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+.form__submit:hover{
+    cursor: pointer;
+    background-color: var(--dark-secundary);
+}
+.form__option{
+    color: var(--black);
+}
+
+
